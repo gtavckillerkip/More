@@ -1,0 +1,10 @@
+.settingsCategory {
+    flex-grow: 1;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.settingsCategory > Label {
+    font-size: 26px;
+    -unity-font-style: bold;
+}

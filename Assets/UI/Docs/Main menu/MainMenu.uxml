@@ -1,0 +1,164 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Templates/Main%20menu/Submenu%20button/SubmenuButton.uss?fileID=7433441132597879392&amp;guid=e5a5a9dad12ebe242b22d0ea07a2ad6f&amp;type=3#SubmenuButton" />
+    <Style src="project://database/Assets/UI/Templates/Main%20menu/Submenu/Category%20button/CategoryButton.uss?fileID=7433441132597879392&amp;guid=d455ca454fd638a45aff5e402e570055&amp;type=3#CategoryButton" />
+    <Style src="project://database/Assets/UI/Templates/Main%20menu/Submenu/Submenu%20title/SubmenuTitle.uss?fileID=7433441132597879392&amp;guid=bea11c01d7a4de64fa9a5e872bc3947f&amp;type=3#SubmenuTitle" />
+    <Style src="project://database/Assets/UI/Templates/Main%20menu/Submenu/Settings/Settings%20category/SettingsCategory.uss?fileID=7433441132597879392&amp;guid=c9b644d2d2871254597f8563cd2cb6bb&amp;type=3#SettingsCategory" />
+    <Style src="project://database/Assets/UI/Templates/Main%20menu/Submenu/Settings/Settings%20category/Settings%20block/SettingsBlock.uss?fileID=7433441132597879392&amp;guid=aeaac83933231274090b3998d4eb1fff&amp;type=3#SettingsBlock" />
+    <Style src="project://database/Assets/UI/Templates/Main%20menu/Submenu/Settings/Settings%20category/Settings%20block/Settings%20element/SettingsElement.uss?fileID=7433441132597879392&amp;guid=d841932ba0b6c644091f189a4bde1fc6&amp;type=3#SettingsElement" />
+    <ui:VisualElement name="Root" style="flex-direction: row; flex-grow: 1; flex-shrink: 1;">
+        <ui:VisualElement name="SubmenuButtons" style="flex-grow: 0; align-items: center; justify-content: center; background-image: url(&quot;project://database/Assets/Images/Miscellaneous/square%20100x100%20white%2020%25-blur.png?fileID=2800000&amp;guid=a481c662c957b704ab1c96b110b7e78a&amp;type=3#square 100x100 white 20%-blur&quot;); -unity-background-image-tint-color: rgb(0, 0, 0); flex-shrink: 0;">
+            <ui:Button text="Game" name="GameButton" class="mainMenuButton submenuButton" />
+            <ui:Button text="Settings" name="SettingsButton" class="mainMenuButton submenuButton" />
+            <ui:Button text="Quit" name="QuitButton" class="mainMenuButton submenuButton" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Submenus" style="flex-grow: 1; flex-shrink: 1;">
+            <ui:VisualElement name="GameSubmenu" style="flex-grow: 1; display: none;">
+                <ui:Label text="Game" name="Title" class="submenuTitle" />
+                <ui:VisualElement name="Content" style="flex-grow: 1; flex-direction: row; flex-shrink: 1;">
+                    <ui:VisualElement name="CategoryButtons" style="flex-grow: 1; width: 400px; align-items: center; justify-content: center; max-width: 400px;">
+                        <ui:Button text="New" name="NewGameButton" class="simpleButton categoryButton" />
+                        <ui:Button text="Load" name="LoadGameButton" class="simpleButton categoryButton" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="CategoryContents" style="flex-grow: 1;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="SettingsSubmenu" style="flex-grow: 1; display: flex;">
+                <ui:Label text="Settings" name="Title" class="submenuTitle" />
+                <ui:VisualElement name="Content" style="flex-grow: 1; flex-direction: row; flex-shrink: 1;">
+                    <ui:VisualElement name="CategoryButtons" style="flex-grow: 1; justify-content: center; align-items: center; width: 400px; max-width: 400px;">
+                        <ui:Button text="Video" name="VideoSettingsButton" class="simpleButton categoryButton" />
+                        <ui:Button text="Audio" name="AudioSettingsButton" class="simpleButton categoryButton" />
+                        <ui:Button text="Controls" name="ControlsSettingsButton" class="simpleButton categoryButton" />
+                        <ui:Button text="Gameplay" name="GameplaySettingsButton" class="simpleButton categoryButton" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="CategoryContents" style="flex-grow: 1;">
+                        <ui:VisualElement name="VideoSettingsContent" style="flex-grow: 1; justify-content: center; align-items: flex-start; display: none;">
+                            <ui:VisualElement name="Resolution" class="settingsElement" style="flex-grow: 1; justify-content: flex-start; flex-direction: row; align-items: center; max-height: 100px;">
+                                <ui:Label text="Resolution" />
+                                <ui:EnumField type="ResolutionIdentifier, Assembly-CSharp" value="FullHD" style="width: 400px;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="FOV" class="settingsElement" style="flex-grow: 1; justify-content: flex-start; flex-direction: row; align-items: center; max-height: 100px;">
+                                <ui:Label text="FOV" />
+                                <ui:Slider value="42" high-value="100" style="width: 400px;" />
+                                <ui:FloatField label="Float Field" value="42.2" style="width: 100px;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="InterfaceScale" class="settingsElement" style="flex-grow: 1; justify-content: flex-start; flex-direction: row; align-items: center; max-height: 100px;">
+                                <ui:Label text="Interface scale" />
+                                <ui:Slider value="42" high-value="100" style="width: 400px;" />
+                                <ui:FloatField label="Float Field" value="42.2" style="width: 100px;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="AudioSettingsContent" style="flex-grow: 1; justify-content: center; align-items: flex-start; display: none;">
+                            <ui:VisualElement name="SoundVolume" class="settingsElement" style="flex-grow: 1; justify-content: flex-start; flex-direction: row; align-items: center; max-height: 100px;">
+                                <ui:Label text="Sound volume" />
+                                <ui:Slider value="42" high-value="100" style="width: 400px;" />
+                                <ui:FloatField label="Float Field" value="42.2" style="width: 100px;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="MusicVolume" class="settingsElement" style="flex-grow: 1; justify-content: flex-start; flex-direction: row; align-items: center; max-height: 100px;">
+                                <ui:Label text="Music volume" />
+                                <ui:Slider value="42" high-value="100" style="width: 400px;" />
+                                <ui:FloatField label="Float Field" value="42.2" style="width: 100px;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="ControlsSettingsContent" style="flex-grow: 1; justify-content: flex-start; align-items: flex-start; display: flex;">
+                            <ui:ScrollView>
+                                <ui:VisualElement name="MouseSettings" style="flex-grow: 1; margin-top: 10px; margin-bottom: 10px;">
+                                    <ui:Label text="Mouse" class="settingsBlockTitle" />
+                                    <ui:VisualElement name="Sensivity" class="settingsElement" style="flex-grow: 1; justify-content: flex-start; flex-direction: row; align-items: center; max-height: 100px;">
+                                        <ui:Label text="Sensivity" />
+                                        <ui:Slider value="42" high-value="100" />
+                                        <ui:FloatField label="Float Field" value="42.2" />
+                                    </ui:VisualElement>
+                                    <ui:VisualElement name="ScopeSensivity" class="settingsElement" style="flex-grow: 1; justify-content: flex-start; flex-direction: row; align-items: center; max-height: 100px;">
+                                        <ui:Label text="Scope sensivity&#10;scale" />
+                                        <ui:Slider value="42" high-value="100" />
+                                        <ui:FloatField label="Float Field" value="42.2" />
+                                    </ui:VisualElement>
+                                    <ui:VisualElement name="Inversion" class="settingsElement" style="flex-grow: 1; justify-content: flex-start; flex-direction: row; align-items: center; max-height: 100px;">
+                                        <ui:Label text="Inversion" />
+                                        <ui:Toggle />
+                                    </ui:VisualElement>
+                                </ui:VisualElement>
+                                <ui:VisualElement name="MovementSettings" style="flex-grow: 1; margin-top: 10px; margin-bottom: 10px;">
+                                    <ui:Label text="Movement" class="settingsBlockTitle" />
+                                    <ui:VisualElement name="MoveForward" class="settingsElement" style="flex-grow: 1; justify-content: flex-start; flex-direction: row; align-items: center; max-height: 100px;">
+                                        <ui:Label text="Move forward" />
+                                        <ui:TextField label="T" placeholder-text="filler text" />
+                                    </ui:VisualElement>
+                                    <ui:VisualElement name="MoveBackward" class="settingsElement" style="flex-grow: 1; justify-content: flex-start; flex-direction: row; align-items: center; max-height: 100px;">
+                                        <ui:Label text="Move backward" />
+                                        <ui:TextField label="T" placeholder-text="filler text" />
+                                    </ui:VisualElement>
+                                    <ui:VisualElement name="MoveLeft" class="settingsElement" style="flex-grow: 1; justify-content: flex-start; flex-direction: row; align-items: center; max-height: 100px;">
+                                        <ui:Label text="Move left" />
+                                        <ui:TextField label="T" placeholder-text="filler text" />
+                                    </ui:VisualElement>
+                                    <ui:VisualElement name="MoveRight" class="settingsElement" style="flex-grow: 1; justify-content: flex-start; flex-direction: row; align-items: center; max-height: 100px;">
+                                        <ui:Label text="Move right" />
+                                        <ui:TextField label="T" placeholder-text="filler text" />
+                                    </ui:VisualElement>
+                                    <ui:VisualElement name="Jump" class="settingsElement" style="flex-grow: 1; justify-content: flex-start; flex-direction: row; align-items: center; max-height: 100px;">
+                                        <ui:Label text="Jump" />
+                                        <ui:TextField label="T" placeholder-text="filler text" />
+                                    </ui:VisualElement>
+                                    <ui:VisualElement name="Duck" class="settingsElement" style="flex-grow: 1; justify-content: flex-start; flex-direction: row; align-items: center; max-height: 100px;">
+                                        <ui:Label text="Duck" />
+                                        <ui:TextField label="T" placeholder-text="filler text" />
+                                    </ui:VisualElement>
+                                    <ui:VisualElement name="Slowdown" class="settingsElement" style="flex-grow: 1; justify-content: flex-start; flex-direction: row; align-items: center; max-height: 100px;">
+                                        <ui:Label text="Slowdown" />
+                                        <ui:TextField label="T" placeholder-text="filler text" />
+                                    </ui:VisualElement>
+                                </ui:VisualElement>
+                                <ui:VisualElement name="Abilities" style="flex-grow: 1; margin-top: 10px; margin-bottom: 10px;">
+                                    <ui:Label text="Abilities" class="settingsBlockTitle" />
+                                    <ui:VisualElement name="PrimaryAttack" class="settingsElement" style="flex-grow: 1; justify-content: flex-start; flex-direction: row; align-items: center; max-height: 100px;">
+                                        <ui:Label text="Primary attack" />
+                                        <ui:TextField label="T" placeholder-text="filler text" />
+                                    </ui:VisualElement>
+                                    <ui:VisualElement name="SecondaryAttack" class="settingsElement" style="flex-grow: 1; justify-content: flex-start; flex-direction: row; align-items: center; max-height: 100px;">
+                                        <ui:Label text="Secondary attack" />
+                                        <ui:TextField label="T" placeholder-text="filler text" />
+                                    </ui:VisualElement>
+                                    <ui:VisualElement name="Ability1" class="settingsElement" style="flex-grow: 1; justify-content: flex-start; flex-direction: row; align-items: center; max-height: 100px;">
+                                        <ui:Label text="Ability 1" />
+                                        <ui:TextField label="T" placeholder-text="filler text" />
+                                    </ui:VisualElement>
+                                    <ui:VisualElement name="Ability2" class="settingsElement" style="flex-grow: 1; justify-content: flex-start; flex-direction: row; align-items: center; max-height: 100px;">
+                                        <ui:Label text="Ability 2" />
+                                        <ui:TextField label="T" placeholder-text="filler text" />
+                                    </ui:VisualElement>
+                                    <ui:VisualElement name="Ability3" class="settingsElement" style="flex-grow: 1; justify-content: flex-start; flex-direction: row; align-items: center; max-height: 100px;">
+                                        <ui:Label text="Ability 3" />
+                                        <ui:TextField label="T" placeholder-text="filler text" />
+                                    </ui:VisualElement>
+                                </ui:VisualElement>
+                                <ui:VisualElement name="Miscellaneous" style="flex-grow: 1; margin-top: 10px; margin-bottom: 10px;">
+                                    <ui:Label text="Miscellaneous" class="settingsBlockTitle" />
+                                    <ui:VisualElement name="Use" class="settingsElement" style="flex-grow: 1; justify-content: flex-start; flex-direction: row; align-items: center; max-height: 100px;">
+                                        <ui:Label text="Use" />
+                                        <ui:TextField label="T" placeholder-text="filler text" />
+                                    </ui:VisualElement>
+                                    <ui:VisualElement name="Quests" class="settingsElement" style="flex-grow: 1; justify-content: flex-start; flex-direction: row; align-items: center; max-height: 100px;">
+                                        <ui:Label text="Quests" />
+                                        <ui:TextField label="T" placeholder-text="filler text" />
+                                    </ui:VisualElement>
+                                    <ui:VisualElement name="Fullscreen" class="settingsElement" style="flex-grow: 1; justify-content: flex-start; flex-direction: row; align-items: center; max-height: 100px;">
+                                        <ui:Label text="Fullscreen" />
+                                        <ui:TextField label="T" placeholder-text="filler text" />
+                                    </ui:VisualElement>
+                                </ui:VisualElement>
+                            </ui:ScrollView>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="GameplaySettingsContent" style="flex-grow: 1; justify-content: center; align-items: flex-start; display: none;">
+                            <ui:VisualElement name="Difficulty" class="settingsElement" style="flex-grow: 1; justify-content: flex-start; flex-direction: row; align-items: center; max-height: 100px;">
+                                <ui:Label text="Difficulty" />
+                                <ui:EnumField type="Difficulty, Assembly-CSharp" style="width: 400px;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

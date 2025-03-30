@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a207140147c643f4bb068db95f2bb988, type: 3}
+  m_Name: Seraphine
+  m_EditorClassIdentifier: 
+  MaxHealth: 100
+  InitialHealth: 100
+  Prefab: {fileID: 8924123386840029681, guid: 30135f6ddeaab3a4f849fa97775c9785, type: 3}
+  AbilitySet: {fileID: 11400000, guid: 4ae5de0342b310f468d82a2339e22de2, type: 2}
+  ControllerPrefab: {fileID: 5226315322539869592, guid: a7a938875087f894f91fed0ad9f5e9be, type: 3}
+  PlayerCharacter: 0

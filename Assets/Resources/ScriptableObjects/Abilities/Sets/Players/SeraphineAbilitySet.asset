@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f86450c907b4d814998ec789be49bfe5, type: 3}
+  m_Name: SeraphineAbilitySet
+  m_EditorClassIdentifier: 
+  AbilityList:
+  - Ability: 0
+    AbilityScriptableObject: {fileID: 11400000, guid: 84521e30386d1b24fa84af9e2bdcbe1d, type: 2}
+  - Ability: 1
+    AbilityScriptableObject: {fileID: 11400000, guid: 7490470f40d580a44a98a3f5e964bcfc, type: 2}
+  - Ability: 2
+    AbilityScriptableObject: {fileID: 11400000, guid: fe3de8eadd5e03f43a50f3d0a6d6e445, type: 2}
+  - Ability: 3
+    AbilityScriptableObject: {fileID: 11400000, guid: 183d4bf8b013b324fa49202e48ce04bc, type: 2}

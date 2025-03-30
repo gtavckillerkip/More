@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1214a3feaaea6c24f90e6385a7159182, type: 3}
+  m_Name: Ability2Projectile
+  m_EditorClassIdentifier: 
+  Stats:
+    Speed: 10
+    LifeDistance: 50
+    Damage: 10
+    Heal: 0
+  Prefab: {fileID: 7120279979843484093, guid: 2ffb5b310b757354fba2e7e59a5d175f, type: 3}
